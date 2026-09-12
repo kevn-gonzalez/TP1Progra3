@@ -1,0 +1,24 @@
+﻿using System.ComponentModel;
+using System.Text.RegularExpressions;
+
+namespace Dominio
+{
+    public class Articulos
+    {
+
+            public int Id { get; set; }
+            [DisplayName("Cod. de artículo")]
+            public string Codigo { get; set; }
+            public string Nombre { get; set; }
+            [DisplayName("Descripción")]
+            public string Descripcion { get; set; }
+            public decimal Precio { get; set; }
+            public string ImagenUrl { get; set; }
+            [DisplayName("Marca")]
+            public Marcas IdMarca { get; set; } = new Marcas();
+            [DisplayName("Categoria")]
+            public Categorias IdCategoria { get; set; } = new Categorias();
+        
+
+    }
+}
