@@ -20,8 +20,29 @@ namespace TP1_Articulos
             InitializeComponent();
         }
 
+        private void dgvPrincipal_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
 
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            List<Articulos> listaDeArticulos = new List<Articulos>();
+            ArticuloDatos Negocio = new ArticuloDatos();
+            dgvPrincipal.DataSource = Negocio.Listar();
+            listaDeArticulos = Negocio.Listar();
+            dgvPrincipal.DataSource = listaDeArticulos;
+
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace Negocio
 
         public AccesoADatos()
         {
-            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true");
+            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_P4_DB; integrated security=true; TrustServerCertificate=True");
             comando = new SqlCommand();
         }
 
