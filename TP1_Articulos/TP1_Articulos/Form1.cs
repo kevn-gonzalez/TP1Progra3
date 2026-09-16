@@ -27,7 +27,11 @@ namespace TP1_Articulos
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            frmAltaArticulo alta = new frmAltaArticulo();
+            alta.ShowDialog();
 
+            ArticuloDatos negocio = new ArticuloDatos();
+            dgvPrincipal.DataSource = negocio.Listar();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

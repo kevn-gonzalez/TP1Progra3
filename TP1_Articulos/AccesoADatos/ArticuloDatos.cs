@@ -68,8 +68,7 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("insert into ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria)values (@Codigo, @Nombre, @Descripcion, @Precio, @IdCategoria, @IdMarca); SELECT SCOPE_IDENTITY()");
-
+                datos.setearConsulta("insert into ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria) values (@Codigo, @Nombre, @Descripcion, @Precio, @IdMarca, @IdCategoria); SELECT SCOPE_IDENTITY()");
                 datos.setearParametro("@Codigo", nuevo.Codigo);
                 datos.setearParametro("@Nombre", nuevo.Nombre);
                 datos.setearParametro("@Descripcion", nuevo.Descripcion);
